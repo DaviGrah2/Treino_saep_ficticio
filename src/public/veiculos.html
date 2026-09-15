@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAEP | Veículos</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body class="form-page">
+    <main class="form-shell">
+      <nav class="topbar"><a class="back-link" href="index.html">← Central</a><span>SAEP / Veículos</span></nav>
+      <header class="form-intro">
+        <p class="eyebrow">Módulo 02 / Cadastro</p>
+        <h1>Veículos</h1>
+        <p>Identifique cada veículo atendido com as informações essenciais para a oficina.</p>
+      </header>
+      <section class="record-layout">
+        <form class="record-form" action="/veiculos" method="post">
+          <label for="placa">Placa</label>
+          <input id="placa" name="placa" type="text" autocapitalize="characters" required>
+          <label for="marca">Marca</label>
+          <input id="marca" name="marca" type="text" required>
+          <label for="ano">Ano</label>
+          <input id="ano" name="ano" type="date" required>
+          <button class="submit-button" type="submit">Salvar veículo</button>
+        </form>
+        <aside class="consult-box">
+          <h2>Frota cadastrada</h2>
+          <p>Acesse a rota de consulta para visualizar os veículos registrados.</p>
+          <a class="consult-link" href="/veiculos">Consultar registros →</a>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAEP | Ordens de serviço</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body class="form-page">
+    <main class="form-shell">
+      <nav class="topbar"><a class="back-link" href="index.html">← Central</a><span>SAEP / Ordens</span></nav>
+      <header class="form-intro">
+        <p class="eyebrow">Módulo 04 / Cadastro</p>
+        <h1>Ordens de serviço</h1>
+        <p>Organize o calendário de atendimento com as datas de abertura e entrega de cada ordem.</p>
+      </header>
+      <section class="record-layout">
+        <form class="record-form" action="/ordemServicos" method="post">
+          <label for="data-pedido">Data do pedido</label>
+          <input id="data-pedido" name="data_pedido" type="datetime-local" required>
+          <label for="data-entrega">Data de entrega</label>
+          <input id="data-entrega" name="data_entrega" type="datetime-local" required>
+          <button class="submit-button" type="submit">Salvar ordem</button>
+        </form>
+        <aside class="consult-box">
+          <h2>Agenda de serviços</h2>
+          <p>Acesse a rota de consulta para visualizar as ordens registradas.</p>
+          <a class="consult-link" href="/ordemServicos">Consultar registros →</a>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>
