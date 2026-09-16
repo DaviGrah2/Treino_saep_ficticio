@@ -15,7 +15,10 @@ module.exports = (sequelize, DataTypes) => {
   }
   ordem_servico.init({
     data_pedido: DataTypes.DATE,
-    data_entrega: DataTypes.DATE
+    data_entrega: DataTypes.DATE,
+    clientes_id: DataTypes.INTEGER,
+    veiculos_id: DataTypes.INTEGER,
+    usuario_id: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'ordem_servico',

@@ -292,6 +292,70 @@ h1 {
     sans-serif;
   text-transform: uppercase;
 }
+.secondary-link {
+  margin-top: 14px;
+}
+
+.relation-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 22px;
+}
+.relation-item {
+  padding: 18px;
+  border-left: 4px solid var(--blue);
+  background: #f7faf9;
+}
+.relation-item strong {
+  display: block;
+  font: 700 0.78rem Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.relation-item span {
+  display: block;
+  margin-top: 7px;
+  color: var(--muted);
+  font: 0.9rem Arial, sans-serif;
+}
+.relation-table-wrap {
+  overflow-x: auto;
+  margin-top: 28px;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 35px rgba(23, 50, 77, 0.06);
+}
+.relation-table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+  text-align: left;
+  font: 0.88rem Arial, sans-serif;
+}
+.relation-table th {
+  color: var(--muted);
+  background: #f7faf9;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.relation-table th,
+.relation-table td {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--line);
+}
+.relation-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+.relation-table td:not(:first-child) {
+  color: var(--teal);
+  font-weight: 700;
+}
+.table-status {
+  margin-top: 28px;
+  color: var(--muted);
+  font: 0.9rem/1.5 Arial, sans-serif;
+}
 
 @media (max-width: 820px) {
   .module-grid {
