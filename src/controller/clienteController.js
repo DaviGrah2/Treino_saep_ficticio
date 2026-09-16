@@ -1,12 +1,12 @@
 const {clientes} = require("../models");
 class clienteController{
     async index(req,res){
-        const cliente = await cliente.findAll();
+        const cliente = await clientes.findAll();
         return res.status(200).json(cliente);
     }
     async store(req,res){
         const {nome,telefone,email} = req.body;
-        const createCliente = await cliente.create({
+        const createCliente = await clientes.create({
             nome,
             telefone,
             email
@@ -16,7 +16,7 @@ class clienteController{
     async update(req,res){
         const {id} = req.params;
         const {nome,telefone,email} = req.body;
-        await cliente.update({
+        await clientes.update({
             nome,
             telefone,
             email
@@ -25,7 +25,7 @@ class clienteController{
     }
     async destroy(req,res){
         const {id} = req.params;
-        await cliente.destroy({
+        await clientes.destroy({
             where:{id}
         });
         return res.status(200).json({menssagem:"Cliente Deletado!"})

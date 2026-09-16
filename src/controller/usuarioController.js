@@ -1,12 +1,12 @@
 const {usuarios} = require("../models");
 class usuarioController{
     async index(req,res){
-        const usuario = await usuario.findAll();
+        const usuario = await usuarios.findAll();
         return res.status(200).json(usuario);
     }
     async store(req,res){
         const {nome,senha,email} = req.body;
-        const createUsuario = await usuario.create({
+        const createUsuario = await usuarios.create({
             nome,
             senha,
             email
@@ -16,7 +16,7 @@ class usuarioController{
     async update(req,res){
         const {id} = req.params;
         const {nome,senha,email} = req.body;
-        await usuario.update({
+        await usuarios.update({
             nome,
             senha,
             email
@@ -25,7 +25,7 @@ class usuarioController{
     }
     async destroy(req,res){
         const {id} = req.params;
-        await usuario.destroy({
+        await usuarios.destroy({
             where:{id}
         });
         return res.status(200).json({menssagem:"Usuário Deletado!"})
